@@ -14,6 +14,6 @@ export const ResetButton = ({setTip, setBill, setPeople, setTipAmount, setPeople
       setPeopleAmount(0)
   }
   return (
-<button onClick={()=>resetAll()} type="button" id="reset-button " className={`reset-button ${bill < 1 && 'inactive'}`}>RESET</button>  )
+<button onClick={()=>resetAll()} type="button" id="reset-button " className={`reset-button ${bill == 0 && 'inactive'}`}>RESET</button>  )
 }
 

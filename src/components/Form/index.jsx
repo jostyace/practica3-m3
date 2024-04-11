@@ -6,6 +6,7 @@ import { Result } from "../Result"
 
 export const Form = () => {
   const [tip, setTip] = useState()
+  const [customTip, setCustomTip] = useState(0)
   const [bill, setBill] = useState(0)
   const [people, setPeople] = useState(1)
   const [tipAmount, setTipAmount] = useState(0)
@@ -28,12 +29,13 @@ export const Form = () => {
 
 
   function manejarClick(e) {
-    if(e.target.type === 'button' || e.target.type === 'input'){
+    if(e.target.type === 'button'){
     setTip(e.target.value)
-    
-    }else{
-      setTip(e.target.value)
-      
+    setCustomTip(0)
+    }
+    else if(e.target.id === 'custom-percentage-button'){
+    setCustomTip(e.target.value)
+    setTip(e.target.value)
     }
   }
   return (
@@ -48,11 +50,11 @@ export const Form = () => {
           <Button percentage="15" tip={tip}/>
           <Button percentage="25" tip={tip}/>
           <Button percentage="50" tip={tip}/>
-          <CustomInput tip={tip} setTip={setTip}/>
+          <CustomInput tip={customTip} setTip={setTip} customTip={customTip} setCustomTip={setCustomTip}/>
         </ul>
         <h2>Number of People</h2>
           <PeopleInput people={people} setPeople={setPeople}/>
       </div>
-      <Result tipAmount={tipAmount} peopleAmount={peopleAmount} setTip={setTip} setBill={setBill} setPeople={setPeople} setTipAmount={setTipAmount} setPeopleAmount={setPeopleAmount} bill={bill} />
+      <Result tipAmount={tipAmount} peopleAmount={peopleAmount} setTip={setTip} setBill={setBill} setPeople={setPeople} setTipAmount={setTipAmount} setPeopleAmount={setPeopleAmount} bill={bill} tip={tip} />
     </div>  )
 }

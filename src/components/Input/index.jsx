@@ -7,9 +7,9 @@ export const BillInput = ({ bill, setBill }) => {
   )
 }
 
-export const CustomInput = ({ tip, setTip }) => {
+export const CustomInput = ({ tip, setTip, customTip, setCustomTip }) => {
   return (
-    <li><input onChange={(e) => { setTip(e.target.value) }} type="number" placeholder="Custom" id="custom-percentage-button" value={tip} className="percentage-button" /></li>
+    <li><input onChange={(e) => { setCustomTip(e.target.value), setTip(e.target.value) }} type="number" placeholder="Custom" id="custom-percentage-button" value={customTip} className="percentage-button" /></li>
   )
 }
 
