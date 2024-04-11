@@ -3,8 +3,8 @@ export const TipAmount = ({tipAmount}) => {
 <span id="tip-amount">{tipAmount}</span>  )
 }
 
-export const TotalAmount = ({totalAmount}) => {
+export const TotalAmount = ({peopleAmount}) => {
   return (
-<span id="total">{totalAmount}</span>  )
+<span id="total">{peopleAmount}</span>  )
 }
 

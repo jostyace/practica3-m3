@@ -6,6 +6,7 @@ button {
   border: 0;
   border-radius: 5px;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .percentage-button {
@@ -24,4 +25,10 @@ button {
 .btn-active {
   background-color: var(--primary);
   color: var(--dark-primary);
+}
+
+.inactive {
+  background-color: #218085 !important;
+  cursor: not-allowed;
+  pointer-events: none;
 }

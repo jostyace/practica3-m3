@@ -2,7 +2,7 @@ import { ResetButton } from "../Button"
 import { TipAmount, TotalAmount } from "../Values"
 import './Result.css'
 
-export const Result = () => {
+export const Result = ({tipAmount, peopleAmount, setTip, setBill, setPeople, setTipAmount, setPeopleAmount, bill}) => {
   return (
     <div className="result-wrapper">
       <div className="result-txt">
@@ -12,7 +12,7 @@ export const Result = () => {
             <p>/ person</p>
           </div>
           <h3>$
-          <TipAmount tipAmount="0"/>
+          <TipAmount tipAmount={tipAmount}/>
           </h3>
         </div>
         <div className="total-amount">
@@ -22,11 +22,11 @@ export const Result = () => {
           </div>
           <h3>$
           <TotalAmount
-          totalAmount="0"/>
+          peopleAmount={peopleAmount}/>
           </h3>
         </div>
       </div>
-      <ResetButton/>
+      <ResetButton setTip={setTip} setBill={setBill} setPeople={setPeople} setTipAmount={setTipAmount} setPeopleAmount={setPeopleAmount} bill={bill}/>
     </div>
   )
 }
