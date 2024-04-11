@@ -55,6 +55,6 @@ export const Form = () => {
         <h2>Number of People</h2>
           <PeopleInput people={people} setPeople={setPeople}/>
       </div>
-      <Result tipAmount={tipAmount} peopleAmount={peopleAmount} setTip={setTip} setBill={setBill} setPeople={setPeople} setTipAmount={setTipAmount} setPeopleAmount={setPeopleAmount} bill={bill} tip={tip} />
+      <Result tipAmount={tipAmount} peopleAmount={peopleAmount} setTip={setTip} setBill={setBill} setPeople={setPeople} setTipAmount={setTipAmount} setPeopleAmount={setPeopleAmount} setCustomTip={setCustomTip} bill={bill} tip={tip} />
     </div>  )
 }

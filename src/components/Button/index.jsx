@@ -5,13 +5,14 @@ export const Button = ({percentage, tip}) => {
 <li id={`percentage-${percentage}`}><button type="button" className={`percentage-button ${tip === percentage && 'active'}`} value={parseInt(percentage)}>{percentage}%</button></li>  )
 }
 
-export const ResetButton = ({setTip, setBill, setPeople, setTipAmount, setPeopleAmount, bill}) => {
+export const ResetButton = ({setTip, setBill, setPeople, setTipAmount, setPeopleAmount, bill, setCustomTip}) => {
   function resetAll(){
       setTip(0)
       setBill(0)
       setPeople(1)
       setTipAmount(0)
       setPeopleAmount(0)
+      setCustomTip(0)
   }
   return (
 <button onClick={()=>resetAll()} type="button" id="reset-button " className={`reset-button ${bill == 0 && 'inactive'}`}>RESET</button>  )
