@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <MainScreen />
-      <h1>Hola</h1>
+      
     </>
   )
 }
