@@ -60,14 +60,3 @@
   width: 90%;
   height: 20%;
 }
-
-.tituloNueva {
-  width: 80%;
-  height: 40px;
-  outline: none;
-  border: 2px solid var(--amarillo);
-  border-radius: 19px;
-  text-align: center;
-  font-family: "Nunito", sans-serif;
-  font-size: 13px;
-}

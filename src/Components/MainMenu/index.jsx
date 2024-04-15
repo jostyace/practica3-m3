@@ -1,5 +1,8 @@
+import { Config } from "../Config"
 import { MenuItem } from "../MenuItem"
 import { NuevaEntrada } from "../NuevaEntrada"
+import { NuevoGasto } from "../NuevoGasto"
+import { Reportes } from "../Reportes"
 import './MainMenu.css'
 
 export const MainMenu = ({cambiarElementos,setActualScreen, location, setTitleScreen }) => {
@@ -14,6 +17,7 @@ export const MainMenu = ({cambiarElementos,setActualScreen, location, setTitleSc
           cambiarElementos={cambiarElementos}
           location = {location}
           setTitleScreen = {setTitleScreen}
+          destinoScreen={<NuevaEntrada cambiarElementos={cambiarElementos} setActualScreen={setActualScreen} />}
         />
         <MenuItem
           btnTitle='Nuevo Gasto'
@@ -23,6 +27,7 @@ export const MainMenu = ({cambiarElementos,setActualScreen, location, setTitleSc
           cambiarElementos={cambiarElementos}
           location = {location}
           setTitleScreen = {setTitleScreen}
+          destinoScreen={<NuevoGasto cambiarElementos={cambiarElementos} setActualScreen={setActualScreen} />}
         />
         <MenuItem
           btnTitle='Reportes'
@@ -32,6 +37,7 @@ export const MainMenu = ({cambiarElementos,setActualScreen, location, setTitleSc
           cambiarElementos={cambiarElementos}
           location = {location}
           setTitleScreen = {setTitleScreen}
+          destinoScreen={<Reportes cambiarElementos={cambiarElementos} setActualScreen={setActualScreen} />}
         />
         <MenuItem
           btnTitle='Config'
@@ -41,6 +47,7 @@ export const MainMenu = ({cambiarElementos,setActualScreen, location, setTitleSc
           cambiarElementos={cambiarElementos}
           location = {location}
           setTitleScreen = {setTitleScreen}
+          destinoScreen={<Config cambiarElementos={cambiarElementos} setTitleScreen={setTitleScreen} setActualScreen={setActualScreen} />}
         />
       </div>
     </div>

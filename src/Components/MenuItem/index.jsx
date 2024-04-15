@@ -1,10 +1,10 @@
 import { NuevaEntrada } from '../NuevaEntrada'
 import './MenuItem.css'
-export const MenuItem = ({btnTitle, btnColor, img, setActualScreen, cambiarElementos, location, setTitleScreen }) => {
+export const MenuItem = ({btnTitle, btnColor, img, setActualScreen, cambiarElementos, location, setTitleScreen, destinoScreen }) => {
   const handleClick = () => {
     cambiarElementos()
     setTitleScreen(btnTitle)
-    setActualScreen(<NuevaEntrada cambiarElementos={cambiarElementos} setActualScreen={setActualScreen} />)
+    setActualScreen(destinoScreen)
   }
   if(location === 'menu') {
   return (

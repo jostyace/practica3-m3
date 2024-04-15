@@ -1,0 +1,26 @@
+.ListadoCategorias {
+  display: flex;
+  flex-direction: row;
+  padding: 20px !important;
+  height: 75vh;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nombreCat {
+  font-size: 12px !important;
+}
+.montoCat {
+  font-size: 12px !important;
+}
+
+.inputCat {
+  width: 80%;
+  height: 40px;
+  outline: none;
+  border: 2px solid var(--amarillo);
+  border-radius: 19px;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+}
