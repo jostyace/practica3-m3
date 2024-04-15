@@ -1,33 +1,46 @@
 import { MenuItem } from "../MenuItem"
+import { NuevaEntrada } from "../NuevaEntrada"
 import './MainMenu.css'
 
-export const MainMenu = ({cambiarElementos}) => {
+export const MainMenu = ({cambiarElementos,setActualScreen, location, setTitleScreen }) => {
   return (
     <div className="mainMenu"> 
       <div className="selector"> 
         <MenuItem
-          btnTitle='Libro de Mormon'
+          btnTitle='Nuevo Ingreso'
           btnColor='var(--celeste)'
-          cambiarElementos={cambiarElementos}
           img='/ldm.svg'
+          setActualScreen={setActualScreen}
+          cambiarElementos={cambiarElementos}
+          location = {location}
+          setTitleScreen = {setTitleScreen}
         />
         <MenuItem
-                  btnTitle='Antiguo Testamento'
+          btnTitle='Nuevo Gasto'
           btnColor='var(--verde)'
-          cambiarElementos={cambiarElementos}
           img='/at.svg'
+          setActualScreen={setActualScreen}
+          cambiarElementos={cambiarElementos}
+          location = {location}
+          setTitleScreen = {setTitleScreen}
         />
         <MenuItem
-                  btnTitle='Nuevo Testamento'
+          btnTitle='Reportes'
           btnColor='var(--rojo)'
-          cambiarElementos={cambiarElementos}
           img='/nt.svg'
+          setActualScreen={setActualScreen}
+          cambiarElementos={cambiarElementos}
+          location = {location}
+          setTitleScreen = {setTitleScreen}
         />
         <MenuItem
-                  btnTitle='Doctrina y Convenios'
+          btnTitle='Config'
           btnColor='var(--amarillo)'
-          cambiarElementos={cambiarElementos}
           img='/dyc.svg'
+          setActualScreen={setActualScreen}
+          cambiarElementos={cambiarElementos}
+          location = {location}
+          setTitleScreen = {setTitleScreen}
         />
       </div>
     </div>

@@ -6,10 +6,11 @@
   justify-content: center;
   flex-direction: column;
   gap: 40px;
+  padding: 30px 0px;
 }
 .descripcionNueva {
   width: 80%;
-  height: 50%;
+  height: 200px;
   border-radius: 10px;
   padding: 20px;
   background: #ffe1b3;

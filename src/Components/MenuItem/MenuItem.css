@@ -26,3 +26,8 @@ button:hover {
   color: fff;
   margin-bottom: 5px;
 }
+
+.btnScreen {
+  width: 90%;
+  height: 40px;
+}

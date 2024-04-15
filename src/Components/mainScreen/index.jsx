@@ -1,27 +1,24 @@
 import { useState } from "react";
 import { MainMenu } from "../MainMenu"
-import { MenuHeader } from "../MenuHeader"
 import "./mainScreen.css"
-import { MainContainer } from "../MainContainer";
-import { TitleContainer } from "../TitleContainer";
-
-
+import { ScreenContainer } from "../ScreenContainer"
+import { TitleContainer } from "../TitleContainer"
+import { Title } from "../Title";
+import { MenuHeader } from "../MenuHeader";
 
 export const MainScreen = () => {
 
-  const [componentesAlternos, setComponentesAlternos] = useState(false);
-  
+  const [componentesAlternos, setComponentesAlternos] = useState(false)
+  const cambiarElementos = () => {setComponentesAlternos(!componentesAlternos)}
+  const [actualScreen, setActualScreen] = useState('')
+  const [titleScreen, setTitleScreen] = useState('')
 
-  const cambiarElementos = () => {
-    setComponentesAlternos(!componentesAlternos);
-  };
 
 
   return (
     <div className="mainScreen">
-        {componentesAlternos ? <TitleContainer cambiarElementos={cambiarElementos}  /> : <MenuHeader />}
-        {componentesAlternos ? <MainContainer cambiarElementos={cambiarElementos} /> : <MainMenu cambiarElementos={cambiarElementos}/>}
-
+        {componentesAlternos ? <TitleContainer screen={<Title cambiarElementos={cambiarElementos} btnTitle={titleScreen} setActualScreen={setActualScreen} />} clase={"men"} /> : <TitleContainer screen={<MenuHeader cambiarElementos={cambiarElementos} setActualScreen={setActualScreen} />} clase={"ele"}  />}
+        {componentesAlternos ? <ScreenContainer cambiarElementos={cambiarElementos} screen={actualScreen}/> : <MainMenu cambiarElementos={cambiarElementos} setActualScreen={setActualScreen} setTitleScreen={setTitleScreen} location={'menu'} />}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import { MenuItem } from "../MenuItem"
 import './NuevaEntrada.css'
 
-export const NuevaEntrada = () => {
+export const Reportes = () => {
   return (
     <div className="nuevaEntrada">
     <input type="text" className="tituloNueva" placeholder="Titulo"/>
